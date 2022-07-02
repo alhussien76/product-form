@@ -9,7 +9,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 (small screen width devices) : 
 
-![image](https://user-images.githubusercontent.com/43760047/177003337-90326be6-3d69-4e38-b416-80ea1262fe39.png)
+![image](https://user-images.githubusercontent.com/43760047/177003855-fcf50e22-dd79-490e-b192-5b3e099b443d.png)
 
 
 ### Dropdown list 
