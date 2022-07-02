@@ -2,26 +2,23 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.3.
 
-## Development server
+## Screenshots
+- empty state form 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+( height screen width devices) : ![image](https://user-images.githubusercontent.com/43760047/177003143-2fc85d29-a39d-4437-a178-e1c2784dde8d.png)
 
-## Code scaffolding
+(small screen width devices) : ![image](https://user-images.githubusercontent.com/43760047/177003337-90326be6-3d69-4e38-b416-80ea1262fe39.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+- dropdown list 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+(height screen width devices) : ![image](https://user-images.githubusercontent.com/43760047/177003159-ec1a2f6b-ff08-4549-a557-303eb7994c9e.png)
 
-## Running unit tests
+(small screen width devices) : ![image](https://user-images.githubusercontent.com/43760047/177003414-4c148984-dc34-4fc7-94eb-8501c0e1259f.png)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- selected product 
 
-## Running end-to-end tests
+(height screen width devices) :![image](https://user-images.githubusercontent.com/43760047/177003204-7fab2f87-b508-4156-8f55-ea7444160e88.png)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+(small screen width devices) :![image](https://user-images.githubusercontent.com/43760047/177003651-d54af4ac-3019-4832-92d9-b70c82298387.png)
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
