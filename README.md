@@ -16,7 +16,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### Dropdown list 
 
-(height screen width devices) : ![image](https://user-images.githubusercontent.com/43760047/177003159-ec1a2f6b-ff08-4549-a557-303eb7994c9e.png)
+(height screen width devices) : 
+
+![image](https://user-images.githubusercontent.com/43760047/177003159-ec1a2f6b-ff08-4549-a557-303eb7994c9e.png)
 
 (small screen width devices) : 
 
