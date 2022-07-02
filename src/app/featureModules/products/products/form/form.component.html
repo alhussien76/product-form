@@ -1,1 +1,172 @@
-<p>form works!</p>
+<div class="container-fluid px-0">
+    <div class="row m-0">
+        <div class="col-md-7 col-lg-6 d-flex flex-column p-0 pb-2 p-md-2">
+            <div class="col-12 px-0 mb-4">
+                <p-dropdown filterPlaceholder="Search products" [options]="products" [(ngModel)]="selectedProduct"
+                    [filter]="true" optionLabel="name" filterBy="name" placeholder="Select or add new product">
+
+                    <ng-template pTemplate="filter" let-options="options">
+                        <div class="flex p-3">
+                            <div class="p-inputgroup">
+                                <div class="row w-100 p-0 m-0">
+                                    <div class="col-12 p-2">
+                                        <nb-form-field class="w-100">
+                                            <input (keyup)="options.filter($event)" fullWidth type="text" fullWidth
+                                                nbInput placeholder="Search products">
+                                            <button class="icon" ghost nbSuffix nbButton>
+                                                <nb-icon icon="search-outline" pack="eva">
+                                                </nb-icon>
+                                            </button>
+                                        </nb-form-field>
+                                    </div>
+                                    <div class="col-12 mb-2 add-new-product" (click)="addNewProduct()">
+                                        <nb-icon style="position: relative; top: 1" nbPrefix icon="plus-outline"
+                                            pack="eva"></nb-icon> <span>
+                                            Add new product
+                                        </span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </ng-template>
+                    <!-- <ng-template pTemplate="selectedItem">
+                        <div class="" *ngIf="selectedProduct">
+                            <div>{{selectedProduct?.name}}</div>
+                        </div>
+                    </ng-template>
+                    <ng-template let-product pTemplate="item">
+                        <div class="">
+                            <nb-icon *ngIf="product.id == 'new'" nbPrefix icon="plus-outline" pack="eva"> </nb-icon>
+                            <div>{{product.name}}</div>
+                        </div>
+                    </ng-template> -->
+                </p-dropdown>
+                <!-- <nb-icon nbPrefix icon="close-outline"></nb-icon> -->
+                <!-- <nb-select class="category" (selectedChange)="productChanged($event)" [fullWidth]="true"
+                    [(ngModel)]="selectedProduct" placeholder="Select or add new product">
+                    (click)="$event.preventDefault()" [value]="null">
+                    <nb-form-field>
+                        <nb-icon nbPrefix icon="search-outline" pack="eva"></nb-icon>
+                        <input type="text" (click)="$event.preventDefault()" (input)="searchProducts($event)" fullWidth
+                            placeholder="Search products" nbInput>
+                    </nb-form-field>
+
+
+                    <nb-option value="add-new-product" class="add-new-product">
+                        <nb-icon nbPrefix icon="plus-outline" pack="eva"></nb-icon> <span>
+                            Add new product
+                        </span>
+                    </nb-option>
+                    <nb-option *ngFor="let product of products" [value]="product.id">
+                        {{product.name}}
+                    </nb-option>
+
+                </nb-select> -->
+
+
+            </div> <!-- dropdown -->
+            <div class="col px-0 d-flex flex-column mb-4">
+                <!-- product name -->
+                <div class="col px-0 label"> Product name</div>
+                <div class="col px-0">
+                    <input type="text" [(ngModel)]="selectedProduct.name" [autocomplete]="false" nbInput fullWidth
+                        status="basic" placeholder="Name">
+                </div>
+            </div>
+            <div class="col px-0 d-flex flex-column mb-3">
+                <!-- product type -->
+                <div class="col px-0 label">Product type</div>
+                <div class="col px-0">
+                    <nb-radio-group name="product type" status="success" class="d-flex"
+                        (valueChange)="typeChanged($event)">
+                        >
+                        <nb-radio class="label" [checked]="selectedProduct.type == 'type1'" value="type1">Type 1
+                        </nb-radio>
+                        <nb-radio class="label" [checked]="selectedProduct.type == 'type2'" value="type2">Type 2
+                        </nb-radio>
+                    </nb-radio-group>
+                </div>
+            </div>
+            <div class="col px-0 d-flex flex-column mb-4">
+                <!-- product category -->
+                <div class="col px-0 label">Product Category</div>
+                <div class="col px-0">
+                    <input type="text" [(ngModel)]="selectedProduct.category" nbInput fullWidth status="basic"
+                        placeholder="Category">
+                </div>
+            </div>
+            <div class="col px-0 mb-4">
+                <nb-checkbox status="success" class="label" (checkedChange)="toggle($event)">This is a sub-category
+                </nb-checkbox>
+            </div>
+            <div class="row px-0 m-0 mb-4">
+                <div class="col-12 col-md-6 px-0 pe-md-2 mb-3 mb-md-0 d-flex flex-column">
+                    <!-- ref no. -->
+                    <div class="col px-0 label"> Reference ID <span class="label-optional text-muted"> (Optional)</span>
+                    </div>
+                    <div class="col px-0">
+                        <input [(ngModel)]="selectedProduct.ref_id" [autocomplete]="false" type="text" nbInput fullWidth
+                            status="basic" placeholder="ID">
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 ps-md-2 px-0 d-flex flex-column">
+                    <!-- password -->
+                    <div class="col px-0 label"> Password
+                    </div>
+                    <div class="col px-0">
+                        <nb-form-field>
+                            <input [(ngModel)]="selectedProduct.password" [type]="getInputType()" fullWidth nbInput
+                                placeholder="Password">
+                            <button nbSuffix nbButton ghost (click)="toggleShowPassword()">
+                                <nb-icon [icon]="showPassword ? 'eye-outline' : 'eye-off-2-outline'" pack="eva"
+                                    [attr.aria-label]="showPassword ? 'hide password' : 'show password'">
+                                </nb-icon>
+                            </button>
+                        </nb-form-field>
+                    </div>
+                </div>
+            </div>
+            <div class="row px-0 m-0 mb-4">
+                <div class="col-12 col-md-6 px-0 pe-md-2 mb-3 mb-md-0 d-flex flex-column">
+                    <!-- Delivery fees price -->
+                    <div class="col px-0 label"> Delivery fees
+                    </div>
+                    <div class="col px-0">
+                        <nb-form-field>
+                            <nb-icon nbPrefix icon="at-outline" pack="eva"></nb-icon>
+                            <input [(ngModel)]="selectedProduct.fees" type="number" fullWidth nbInput
+                                placeholder="Delivery fees">
+                        </nb-form-field>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 ps-md-2 px-0 d-flex flex-column">
+                    <!-- Delivery fees percentage -->
+                    <div class="col px-0 label"> Delivery fees
+                    </div>
+                    <div class="col px-0">
+                        <nb-form-field>
+                            <nb-icon nbPrefix icon="percent-outline" pack="eva"></nb-icon>
+                            <input [(ngModel)]="selectedProduct.fees_percentage" type="number" fullWidth nbInput
+                                placeholder="Delivery fees">
+                        </nb-form-field>
+                    </div>
+                </div>
+            </div>
+            <div class="row m-0">
+                <div class="col-12  d-flex justify-content-between px-0">
+                    <div class="col-auto">
+                        <button class="btn btn-link delete" status="basic">Delete</button>
+                    </div>
+                    <div class="col-auto">
+                        <button class="btn btn-link cancel me-2" status="basic">Cancel</button>
+                        <button nbButton class="save" status="success">Save</button>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

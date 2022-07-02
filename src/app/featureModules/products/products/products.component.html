@@ -1,1 +1,3 @@
-<p>products works!</p>
+<app-form *ngIf="products$ | async as products" [products]="products"></app-form>
+<nb-card *ngIf="!(products$ | async)" class="h-100" [nbSpinner]="true" nbSpinnerSize="giant" nbSpinnerStatus="primary">
+</nb-card>

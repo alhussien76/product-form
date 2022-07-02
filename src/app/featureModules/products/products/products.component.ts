@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, tap } from 'rxjs';
-import { Products } from '../models/products';
+import { Observable, shareReplay, tap } from 'rxjs';
+import { Product } from '../models/products';
 import { ProductsService } from '../services/products.service';
 
 @Component({
@@ -9,13 +9,11 @@ import { ProductsService } from '../services/products.service';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
-  products$!: Observable<Products[]>
+  products$: Observable<Product[]> = this.productsService.getProducts().pipe(shareReplay());
   constructor(private productsService: ProductsService) { }
 
   ngOnInit(): void {
-    this.productsService.getProducts().pipe(
-      tap(console.log)
-    ).subscribe()
+
   }
 
 }

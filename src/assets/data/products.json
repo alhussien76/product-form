@@ -1,5 +1,5 @@
-[{"id":1,"name":"Browsebug","type":"type2","category":"Cheese - Sheep Milk","is_sup_category":true,"ref_id":"hOE-82","password":"4rnKji3N","fees":"$0.11","fees_percentage":18},
-{"id":2,"name":"Blogpad","type":"type1","category":"Flower - Leather Leaf Fern","is_sup_category":true,"ref_id":"oOo-30","password":"XHLXt3TVxJs","fees":"$7.53","fees_percentage":46},
-{"id":3,"name":"Blognation","type":"type2","category":"Wine - Redchard Merritt","is_sup_category":true,"ref_id":"6ps-29","password":"6deDAeT9q0","fees":"$5.90","fees_percentage":50},
-{"id":4,"name":"Topdrive","type":"type2","category":"Crab - Dungeness, Whole, live","is_sup_category":true,"ref_id":"gwF-08","password":"sAWynq9m","fees":"$6.90","fees_percentage":45},
-{"id":5,"name":"Photospace","type":"type1","category":"Eggplant - Asian","is_sup_category":true,"ref_id":"sxL-38","password":"jjryFy","fees":"$3.76","fees_percentage":48}]
+[{"id":"1","name":"Browsebug","type":"type2","category":"Cheese - Sheep Milk","is_sup_category":true,"ref_id":"hOE-82","password":"4rnKji3N","fees":"0.11","fees_percentage":18},
+{"id":"2","name":"Blogpad","type":"type1","category":"Flower - Leather Leaf Fern","is_sup_category":true,"ref_id":"oOo-30","password":"XHLXt3TVxJs","fees":"7.53","fees_percentage":46},
+{"id":"3","name":"Blognation","type":"type2","category":"Wine - Redchard Merritt","is_sup_category":true,"ref_id":"6ps-29","password":"6deDAeT9q0","fees":"5.90","fees_percentage":50},
+{"id":"4","name":"Topdrive","type":"type2","category":"Crab - Dungeness, Whole, live","is_sup_category":true,"ref_id":"gwF-08","password":"sAWynq9m","fees":"6.90","fees_percentage":45},
+{"id":"5","name":"Photospace","type":"type1","category":"Eggplant - Asian","is_sup_category":true,"ref_id":"sxL-38","password":"jjryFy","fees":"3.76","fees_percentage":48}]
