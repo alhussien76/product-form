@@ -5,7 +5,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Screenshots
 ### Empty state form 
 
-( height screen width devices) : ![image](https://user-images.githubusercontent.com/43760047/177003143-2fc85d29-a39d-4437-a178-e1c2784dde8d.png)
+( height screen width devices) : 
+
+![image](https://user-images.githubusercontent.com/43760047/177003143-2fc85d29-a39d-4437-a178-e1c2784dde8d.png)
 
 (small screen width devices) : 
 
@@ -20,9 +22,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ![image](https://user-images.githubusercontent.com/43760047/177003414-4c148984-dc34-4fc7-94eb-8501c0e1259f.png)
 
+
 ### Selected product 
 
-(height screen width devices) :![image](https://user-images.githubusercontent.com/43760047/177003204-7fab2f87-b508-4156-8f55-ea7444160e88.png)
+(height screen width devices) :
+
+![image](https://user-images.githubusercontent.com/43760047/177003204-7fab2f87-b508-4156-8f55-ea7444160e88.png)
 
 (small screen width devices) :
 
