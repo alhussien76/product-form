@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.3.
 
+## Deployment
+
+This app deployed on firebase [Go to app](https://products-form.web.app/products)
+
 ## Screenshots
 ### Empty state form 
 
