@@ -4,20 +4,24 @@ nb-icon {
     font-size: nb-theme(text-paragraph-2-line-height);
 }
 
-button.btn.btn-link {
-    // font-size: 13px !important;
-    font-weight: 400;
-    text-decoration: none !important;
-    &.delete {
-        color: #c40000 !important;
-    }
-    &.cancel {
-        color: nb-theme(color-placeholder) !important;
-    }
+button {
     &.save {
         background-color: #00bcb4 !important;
+        color: nb-theme(color-basic-100) !important;
+    }
+    &.btn.btn-link {
+        // font-size: 13px !important;
+        font-weight: 400;
+        text-decoration: none !important;
+        &.delete {
+            color: #c40000 !important;
+        }
+        &.cancel {
+            color: nb-theme(color-placeholder) !important;
+        }
     }
 }
+
 // dropdown design
 
 ::ng-deep .p-dropdown-panel {
