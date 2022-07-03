@@ -1,0 +1,36 @@
+@use "../../../../themes.scss" as *;
+.body {
+    color: nb-theme(color-placeholder) !important;
+}
+button {
+    &.close-icon {
+        background-color: nb-theme(color-basic-100) !important;
+        border: none !important;
+    }
+    &.save-dialog {
+        background-color: #00bcb4 !important;
+        color: nb-theme(color-basic-100) !important;
+    }
+    &.delete-dialog {
+        background-color: #c40000 !important;
+        color: nb-theme(color-basic-100) !important;
+    }
+    &.btn.btn-link {
+        // font-size: 13px !important;
+        font-weight: 400;
+        text-decoration: none !important;
+        &.cancel-dialog {
+            background-color: nb-theme(color-basic-100) !important ;
+            color: nb-theme(color-placeholder) !important;
+        }
+    }
+}
+nb-card {
+    width: 507px !important;
+    box-shadow: 0px 3px 6px #00000029 !important;
+}
+@media screen and (max-width: 518px) {
+    nb-card {
+        width: 95vw !important;
+    }
+}

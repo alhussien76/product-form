@@ -1,0 +1,89 @@
+@use "../../../../../themes.scss" as *;
+
+nb-icon {
+    font-size: nb-theme(text-paragraph-2-line-height);
+}
+
+button {
+    &.save {
+        background-color: #00bcb4 !important;
+        color: nb-theme(color-basic-100) !important;
+    }
+    &.btn.btn-link {
+        // font-size: 13px !important;
+        font-weight: 400;
+        text-decoration: none !important;
+        &.delete {
+            color: #c40000 !important;
+        }
+        &.cancel {
+            color: nb-theme(color-placeholder) !important;
+        }
+    }
+}
+
+// dropdown design
+
+::ng-deep .p-dropdown-panel {
+    top: 49px !important;
+    left: -1px !important;
+    border: solid 1px var(--input-basic-border-color) !important;
+    box-shadow: none;
+}
+
+::ng-deep div.p-dropdown.p-component {
+    width: 100%;
+    border-color: var(--input-basic-border-color);
+    border-radius: var(--input-rectangle-border-radius);
+    &:hover {
+        border-color: var(--input-basic-border-color);
+    }
+    .overlayAnimation {
+        left: -1 !important;
+    }
+}
+.add-new-product {
+    cursor: pointer !important;
+    // border-bottom: solid 1px #edecee;
+    padding: 0.7rem;
+    list-style: nb-theme(text-heading-4-line-height);
+    &:hover {
+        background-color: #e9ecef;
+    }
+}
+button.icon {
+    pointer-events: none !important;
+    background-color: nb-theme(color-basic-100) !important;
+    border: none;
+    // border-left: none;
+    // border-color: var(--input-basic-border-color);
+    // border-radius: 0px;
+    // border-top-right-radius: 6px;
+    // border-bottom-right-radius: 6px;
+}
+::ng-deep .p-dropdown-header {
+    cursor: default;
+    background-color: nb-theme(color-basic-100) !important;
+    padding: 0px !important;
+    & > div {
+        padding: 0px !important;
+    }
+}
+.overlayAnimation {
+    left: -1 !important;
+}
+//end dropdown
+
+// style toaster
+::ng-deep nb-toast > div {
+    & > nb-icon {
+        color: #36b37e;
+        font-size: 1.5rem !important;
+    }
+    &.icon-container {
+        margin-right: 0.5rem !important;
+    }
+    &.content-container .title {
+        display: none !important;
+    }
+}
