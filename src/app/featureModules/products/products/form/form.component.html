@@ -2,8 +2,9 @@
     <div class="row m-0">
         <div class="col-md-7 col-lg-6 d-flex flex-column p-0 pb-2 p-md-2">
             <div class="col-12 px-0 mb-4">
-                <p-dropdown #name filterPlaceholder="Search products" [options]="products" [(ngModel)]="selectedProduct"
-                    [filter]="true" optionLabel="name" filterBy="name" placeholder="Select or add new product">
+                <p-dropdown #dropdown (onChange)="productChanged($event.value)" filterPlaceholder="Search products"
+                    [options]="products" [(ngModel)]="selectedProduct" [filter]="true" optionLabel="name"
+                    filterBy="name" placeholder="Select or add new product">
                     <ng-template pTemplate="filter" let-options="options">
                         <div class="flex p-3">
                             <div class="p-inputgroup">
@@ -29,19 +30,7 @@
                             </div>
                         </div>
                     </ng-template>
-                    <!-- <ng-template pTemplate="selectedItem">
-                        <div class="" *ngIf="selectedProduct">
-                            <div>{{selectedProduct?.name}}</div>
-                        </div>
-                    </ng-template>-->
-                    <ng-template let-product pTemplate="item">
-                        <div class="">
-                            <nb-icon *ngIf="product.id == 'new'" nbPrefix icon="plus-outline" pack="eva"> </nb-icon>
-                            <div>{{product.name}}</div>
-                        </div>
-                    </ng-template>
                 </p-dropdown>
-                <!-- <nb-icon nbPrefix icon="close-outline"></nb-icon> -->
                 <!-- <nb-select class="category" (selectedChange)="productChanged($event)" [fullWidth]="true"
                     [(ngModel)]="selectedProduct" placeholder="Select or add new product">
                     (click)="$event.preventDefault()" [value]="null">
@@ -50,8 +39,6 @@
                         <input type="text" (click)="$event.preventDefault()" (input)="searchProducts($event)" fullWidth
                             placeholder="Search products" nbInput>
                     </nb-form-field>
-
-
                     <nb-option value="add-new-product" class="add-new-product">
                         <nb-icon nbPrefix icon="plus-outline" pack="eva"></nb-icon> <span>
                             Add new product
@@ -62,8 +49,6 @@
                     </nb-option>
 
                 </nb-select> -->
-
-
             </div> <!-- dropdown -->
             <div class="col px-0 d-flex flex-column mb-4">
                 <!-- product name -->
@@ -78,7 +63,7 @@
                 <div class="col px-0 label">Product type</div>
                 <div class="col px-0">
                     <nb-radio-group name="product type" status="success" class="d-flex"
-                        (valueChange)="typeChanged($event)">
+                        (valueChange)="selectedProduct.type= $event">
                         >
                         <nb-radio class="label" [checked]="selectedProduct.type == 'type1'" value="type1">Type 1
                         </nb-radio>
@@ -96,7 +81,8 @@
                 </div>
             </div>
             <div class="col px-0 mb-4">
-                <nb-checkbox status="success" class="label" (checkedChange)="toggle($event)">This is a sub-category
+                <nb-checkbox [checked]="selectedProduct.is_sup_category" status="success" class="label"
+                    (checkedChange)="selectedProduct.is_sup_category= $event">This is a sub-category
                 </nb-checkbox>
             </div>
             <div class="row px-0 m-0 mb-4">
@@ -159,8 +145,10 @@
                             status="basic">Delete</button>
                     </div>
                     <div class="col-auto">
-                        <button class="btn btn-link cancel me-2" status="basic">Cancel</button>
-                        <button (click)="saveProduct()" nbButton class="save">Save</button>
+                        <button (click)="cancelClicked()" class="btn btn-link cancel me-2"
+                            status="basic">Cancel</button>
+                        <button [disabled]="!selectedProduct.id" (click)="saveProduct()" nbButton
+                            class="save">Save</button>
                     </div>
 
                 </div>

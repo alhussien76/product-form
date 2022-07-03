@@ -22,7 +22,7 @@
                     class="btn btn-link cancel-dialog me-2">{{leftButtonLabel}}</button>
                 <button
                     [ngClass]="{'save-dialog':rightbuttonLabel.type == 'save','delete-dialog':rightbuttonLabel.type == 'delete' }"
-                    (click)="save()" nbButton>{{rightbuttonLabel.label}}</button>
+                    (click)="submit()" nbButton>{{rightbuttonLabel.label}}</button>
             </div>
         </div>
 

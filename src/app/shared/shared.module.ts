@@ -37,6 +37,7 @@ import { ConfirmationDialogComponent } from './components/confirmation-dialog/co
     DialogModule,
     NbDialogModule.forChild(),
 
+
   ],
   exports: [
     FormsModule,

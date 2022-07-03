@@ -73,3 +73,17 @@ button.icon {
     left: -1 !important;
 }
 //end dropdown
+
+// style toaster
+::ng-deep nb-toast > div {
+    & > nb-icon {
+        color: #36b37e;
+        font-size: 1.5rem !important;
+    }
+    &.icon-container {
+        margin-right: 0.5rem !important;
+    }
+    &.content-container .title {
+        display: none !important;
+    }
+}

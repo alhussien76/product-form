@@ -18,8 +18,7 @@ export class ConfirmationDialogComponent implements OnInit {
   close() {
     this.dialogRef.close('closed');
   }
-  save() {
-    console.log(this.rightbuttonLabel.type)
+  submit() {
     if (this.rightbuttonLabel.type == 'save') {
       this.dialogRef.close('saved');
     }
